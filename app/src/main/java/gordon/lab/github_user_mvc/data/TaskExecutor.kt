@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.util.Log
 import gordon.lab.github_user_mvc.core.GithubApp
+import gordon.lab.github_user_mvc.data.notify.NotifyNetworkStatus
 import org.greenrobot.eventbus.EventBus
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.ThreadPoolExecutor
@@ -57,7 +58,6 @@ class TaskExecutor {
                 mNetErrorQueue?.add(task)
                 EventBus.getDefault().post(NotifyNetworkStatus(!isConnected(), mNetErrorQueue!!))
                 mNetErrorQueue = LinkedBlockingQueue()
-
             } else {
                 mThreadPool?.execute(task)
             }

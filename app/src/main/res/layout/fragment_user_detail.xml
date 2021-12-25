@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_close_24" />
+
+    <TextView
+        android:id="@+id/tvUserLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_margin="3dp"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/imgAvatar"
+        app:layout_constraintBottom_toTopOf="@+id/imgAvatar"
+        tools:text="@string/str_detail_name_placeholder" />
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserLogin"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/nameWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        app:layout_constraintTop_toTopOf="@id/imgAvatar"
+        app:layout_constraintBottom_toTopOf="@+id/locationWrapper"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/imgUserName"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="3dp"
+            android:padding="2dp"
+            android:src="@drawable/baseline_person_outline_black_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_person_outline_black_24" />
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            tools:text="@string/str_detail_name_placeholder" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/locationWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/nameWrapper"
+        app:layout_constraintStart_toStartOf="@id/nameWrapper"
+        app:layout_constraintTop_toBottomOf="@id/nameWrapper"
+        app:layout_constraintBottom_toTopOf="@+id/companyWrapper"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/imgUserLocation"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="3dp"
+            android:padding="2dp"
+            android:src="@drawable/baseline_map_black_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_map_black_24" />
+        <TextView
+            android:id="@+id/tvUserLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginStart="1dp"
+            tools:text="@string/str_detail_location_placeholder"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/companyWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/locationWrapper"
+        app:layout_constraintBottom_toTopOf="@+id/emailWrapper"
+        app:layout_constraintStart_toStartOf="@id/locationWrapper"
+        app:layout_constraintTop_toBottomOf="@id/locationWrapper"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/imgUserCompany"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="3dp"
+            android:padding="2dp"
+            android:src="@drawable/baseline_festival_black_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_festival_black_24" />
+        <TextView
+            android:id="@+id/tvUserCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginStart="1dp"
+            tools:text="@string/str_detail_company_placeholder"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emailWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/companyWrapper"
+        app:layout_constraintStart_toStartOf="@id/companyWrapper"
+        app:layout_constraintTop_toBottomOf="@id/companyWrapper"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/imgUserEmail"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="3dp"
+            android:padding="2dp"
+            android:src="@drawable/baseline_mail_outline_black_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_mail_outline_black_24" />
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginStart="1dp"
+            tools:text="@string/str_detail_email_placeholder"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bioWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgAvatar"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/imgUserBio"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="3dp"
+            android:padding="2dp"
+            android:src="@drawable/baseline_format_quote_black_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_format_quote_black_24" />
+        <TextView
+            android:id="@+id/tvUserBio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginStart="1dp"
+            tools:text="@string/str_detail_bio_placeholder"  />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dividerLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bioWrapper" />
+
+    <LinearLayout
+        android:id="@+id/linkWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dividerLine" >
+
+        <ImageView
+            android:id="@+id/imgUserLink"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="3dp"
+            android:padding="2dp"
+            android:src="@drawable/baseline_link_black_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_link_black_24" />
+
+        <TextView
+            android:id="@+id/tvUserLink"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginStart="1dp"  />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

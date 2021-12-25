@@ -52,7 +52,7 @@ class TaskHttpRequest (private val mUrl: String) {
         return this
     }
 
-    fun getArg(key: String, value: String): TaskHttpRequest {
+    fun setArg(key: String, value: String): TaskHttpRequest {
         mQueryStrings.add("%s=%s".format(key, URLEncoder.encode(value, "utf-8")))
         return this
     }

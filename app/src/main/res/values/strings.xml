@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Github-User-MVC</string>
+    <string name="btn_send_str">送出</string>
+    <string name="btn_clean_str">清空</string>
+    <string name="et_search_user_hint">請輸入使用者名稱</string>
+    <string name="toast_error_msg">Houston, we have a problem</string>
+    <string name="toolbar_title">Github 使用者列表</string>
+
+    <string name="str_detail_login_placeholder">\@%s</string>
+    <string name="str_detail_name_placeholder">Gordon Wu</string>
+    <string name="str_detail_email_placeholder">ghostsas0110@gmail.com</string>
+    <string name="str_detail_location_placeholder">taipei</string>
+    <string name="str_detail_bio_placeholder">this is bio</string>
+    <string name="str_detail_blog_placeholder">https://www.linkedin.com/in/wusinwei/</string>
+    <string name="str_detail_company_placeholder">this is company</string>
+
+    <string name="str_detail_location_unset">we don\'t know where he is</string>
+    <string name="str_detail_company_unset">no company</string>
+    <string name="str_detail_bio_unset">no bio === ¯\\_(ツ)_/¯ === </string>
+
 </resources>
